@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <form action="https://fom.in.ua/echo">
+        <fieldset>
+            <legend><b>Пошук</b></legend>
+            <table>
+<!--Тип кузова START-->
+                <tr>
+                    <td>
+                        <p><b>Тип кузова</b></p>
+                    </td>
+                    <td colspan="2">
+                        <p><label><input type="checkbox" name="type" checked>Седан</label></p>
+                        <p><label><input type="checkbox" name="type">Хетчбек</label></p>
+                        <p><label><input type="checkbox" name="type">Універсал</label></p>
+                        <p><label><input type="checkbox" name="type">Позашляховик</label></p>
+                        <p><label><input type="checkbox" name="type">Купе</label></p>
+                        <p><label><input type="checkbox" name="type">Кабріолет</label></p>
+                    </td>
+                </tr>
+
+<!--Марка авто START-->
+                <tr>
+                    <td>
+                        <p><b>Марка авто</b></p>
+                    </td>
+                    <td colspan="2">
+                        <select name="mark" id="mark">
+                            <option value="" disabled selected>Виберіть марку</option>
+                            <option value="mersedes">Mersedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                            <option value="ford">Ford</option>
+                            <option value="peugeot">Peugeot</option>
+                            <option value="kia">Kia</option>
+                        </select>
+                    </td>
+                </tr>
+<!--Країна виробник START-->
+                <tr>
+                    <td>
+                        <p><b>Країна виробник</b></p>
+                    </td>
+                    <td colspan="2">
+                        <select name="country" id="country">
+                            <option value="" disabled selected>Виберіть країну</option>
+                            <option value="Germany">Німеччина</option>
+                            <option value="USA">США</option>
+                            <option value="Japan">Японія</option>
+                            <option value="China">Китай</option>
+                            <option value="France">Франція</option>
+                            <option value="Spain">Іспанія</option>
+                        </select>
+                    </td>
+                </tr>
+<!--Ціна START-->
+                <tr>
+                    <td>
+                        <p><b>Ціна</b></p>
+                    </td>
+                    <td>
+                        <label>Від <input type="number" id="price-from" value="0" min="0" max="1000000" step="100"></label>
+                    </td>
+                    <td>
+                        <label>До <input type="number" value="1000000" id="price-to" min="0" max="1000000" step="100"></label>
+                    </td>
+                </tr>
+<!--Рік випуску START-->
+                <tr>
+                    <td>
+                        <p><b>Рік випуску</b></p>
+                    </td>
+                    <td>
+                        <label>Від <input type="number" id="year-from" value="1900" min="1900" max="2023"></label>
+                    </td>
+                    <td>
+                        <label>До <input type="number" value="2023" id="year-to" min="1900" max="2023" ></label>
+                    </td>
+                </tr>
+<!--Стан START-->
+                <tr>
+                    <td>
+                        <p><b>Стан</b></p>
+                    </td>
+                    <td colspan="2">
+                        <p><label><input type="checkbox" id="used" name="condition">Вживані</label></p>
+                        <p><label><input type="checkbox" id="new" name="condition">Нові</label></p>
+                        <p><label><input type="checkbox" id="first-owner" name="condition">Перший власник</label></p>
+                        <p><label><input type="checkbox" id="broken" name="condition">Биті</label></p>
+                        <p><label><input type="checkbox" id="credit" name="condition">У кредиті</label></p>
+                        <p><label><input type="checkbox" id="non-cleared" name="condition">Нерозмитнені</label></p>
+                </tr>
+<!--Тип коробки передач START-->
+                <tr>
+                    <td>
+                        <p><b>Тип коробки передач</b></p>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="type" id="mechanic">Механічна</label>
+                    </td>
+                    <td>
+                        <label><input type="radio" name="type" id="automatic">Автоматична</label>
+                    </td>
+                </tr>
+<!--Тип палива START-->
+                <tr>
+                    <td>
+                        <p><b>Тип палива</b></p>
+                    </td>
+                    <td colspan="2">
+                        <p><label><input type="checkbox" id="gasoline" name="fuels">Бензин</label></p>
+                        <p><label><input type="checkbox" id="diesel" name="fuels">Дизель</label></p>
+                        <p><label><input type="checkbox" id="gas" name="fuels">Газ</label></p>
+                        <p><label><input type="checkbox" id="electro" name="fuels">Електрокар</label></p>
+                        <p><label><input type="checkbox" id="hybrid" name="fuels">Гібрид</label></p>
+                    </td>
+                </tr>
+<!--Колір START-->
+                <tr>
+                    <td>
+                        <p><b>Колір</b></p>
+                    </td>
+                    <td colspan="2">
+                        <select name="colour" id="colour">
+                            <option value="" disabled selected>Виберіть колір</option>
+                            <option value="white">Білий</option>
+                            <option value="black">Чорний</option>
+                            <option value="red">Червоний</option>
+                            <option value="green">Зелений</option>
+                            <option value="brown">Коричневий</option>
+                            <option value="gray">Сірий</option>
+                        </select>  
+                    </td>
+                </tr>
+<!--Комфорт START-->
+                <tr>
+                    <td>
+                        <p><b>Комфорт</b></p>
+                    </td>
+                    <td colspan="2">
+                        <p><label><input type="checkbox" id="warm">Підігрів сидінь</label></p>
+                        <p><label><input type="checkbox" id="conditioner">Кондиціонер</label></p>
+                        <p><label><input type="checkbox" id="parking">Парктронік</label></p>
+                        <p><label><input type="checkbox" id="seat">Регулювання сидінь</label></p>
+                        <p><label><input type="checkbox" id="salon">Шкіряний салон</label></p>
+                    </td>
+                </tr>
+<!--Кнопки START-->
+                <tr>
+                    <td colspan="3">
+                        <input type="submit" value="Знайти">
+                        <input type="reset" value="Скинути">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+     </form>
+</body>
+</html>
